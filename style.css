@@ -1,0 +1,135 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* cursor: none; */
+}
+body {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+/* navigation bar styling starts here  */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #021622;
+
+}
+.logo, .logo img{
+  width: 100px;
+  height: 80px;
+  cursor: pointer;
+}
+
+.navbar ul{
+  display: flex;
+}
+.navbar ul li{
+  list-style: none;
+}
+.navbar ul li a{
+  color: white;
+  text-decoration: none;
+  margin: 0px 15px;
+  transition: 0.5s;
+}
+.navbar ul li a:hover{
+  color: #37FF8B;
+}
+/* From uiverse.io by @adityasrivastav */
+/* === removing default button style ===*/
+.button {
+  margin: 0;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* button styling */
+.button {
+  --border-right: 6px;
+  --text-stroke-color: rgba(255,255,255,0.6);
+  --animation-color: #37FF8B;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+/* hover */
+.button:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
+
+::selection {
+  color: #021622;
+  background: #37FF8B;
+}
+
+
+
+@media (max-width: 660px) {
+  .wrapper {
+    margin: 15px;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fill, 100%);
+  }
+  .popup-box .popup {
+    max-width: calc(100% - 15px);
+  }
+  .bottom-content .settings i {
+    font-size: 17px;
+  }
+}
+/* cusor animation for notes app  */
+
+
+@keyframes colors{
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+
+dl, ol, ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+}
+
+.container{
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    margin: 3rem 4rem;
+    padding: 3rem 1rem;
+    background-image: linear-gradient(120deg, #8fd3f4 0%, #84fab0 100%); 
+}
+
+.add{
+    background-color: #11381f;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
